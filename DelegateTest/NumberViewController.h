@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface NumberViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *minus;
 @property (weak, nonatomic) IBOutlet UILabel *number;
 @property (weak, nonatomic) IBOutlet UIButton *plus;
-@property (nonatomic,assign) NSInteger integer;
+@property (nonatomic,assign) NSNumber *integer;
+- (IBAction)minusNumber:(id)sender;
+- (IBAction)plusNumber:(id)sender;
 
 @end

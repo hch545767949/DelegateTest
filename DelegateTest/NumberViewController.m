@@ -17,20 +17,20 @@
 - (instancetype)init {
     self = [super init];
     if(self) {
-        self.number.text = self.number.text = [NSString stringWithFormat:@"%ld",self.integer];
-        [self.view setBackgroundColor:[UIColor redColor]];
-        [self.plus setTitle:@"+" forState:UIControlStateNormal];
-        [self.minus setTitle:@"-" forState:UIControlStateNormal];
-        NSLog(@"%@",[NSString stringWithFormat:@"init+%@",self.plus == nil? @"YES" : @"NO"]);
+        _integer = [NSNumber numberWithInteger:1];
     }
-    _integer = 1;
+    
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad");
     
+    self.number.text = [NSString stringWithFormat:@"%@",self.integer];
+    [self.plus setTitle:@"+" forState:UIControlStateNormal];
+    [self.minus setTitle:@"-" forState:UIControlStateNormal];
+    
+    [self addObserver:self forKeyPath:@"integer" options:NSKeyValueObservingOptionNew context:nil];
     
 }
 
@@ -48,5 +48,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if( [keyPath isEqualToString:@"integer"] && object == self) {
+        self.number.text = [change valueForKey:NSKeyValueChangeNewKey];
+    }
+}
 
+- (IBAction)minusNumber:(id)sender {
+    NSNumber *newNumber = [NSNumber numberWithInteger:[self.integer integerValue] - 1];
+    [self setValue:newNumber forKey:@"integer"];
+    NSLog(@"minusNumber");
+}
+
+- (IBAction)plusNumber:(id)sender {
+    NSNumber *newNumber = [NSNumber numberWithInteger:[self.integer integerValue] + 1];
+    [self setValue:newNumber forKey:@"integer"];
+    NSLog(@"plusNumber");
+}
 @end
