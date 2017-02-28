@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+//#import "RootViewController.h"
+#import "NumberViewController.h"
 
 @interface AppDelegate ()
+
+//@property (strong,nonatomic) RootViewController *rootViewController;
+@property (strong,nonatomic) NumberViewController *numberViewController;
 
 @end
 
@@ -16,7 +21,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];;
+    
+    self.window.rootViewController = self.numberViewController;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -47,5 +56,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+#pragma mark -- getters and setters
+- (NumberViewController *)numberViewController {
+    
+    if(_numberViewController == nil) {
+        _numberViewController = [[NumberViewController alloc]init];
+    }
+    return _numberViewController;
+}
 @end
