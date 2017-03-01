@@ -27,10 +27,17 @@
     [super viewDidLoad];
     
     self.number.text = [NSString stringWithFormat:@"%@",self.integer];
-    [self.plus setTitle:@"+" forState:UIControlStateNormal];
-    [self.minus setTitle:@"-" forState:UIControlStateNormal];
     
-    [self addObserver:self forKeyPath:@"integer" options:NSKeyValueObservingOptionNew context:nil];
+    [self.plus setTitle:@"+"
+               forState:UIControlStateNormal];
+    
+    [self.minus setTitle:@"-"
+                forState:UIControlStateNormal];
+    
+    [self addObserver:self
+           forKeyPath:@"integer"
+              options:NSKeyValueObservingOptionNew
+              context:nil];
     
 }
 
@@ -54,6 +61,10 @@
         self.number.text = [NSString stringWithFormat:@"%@",newNumber];
         NSLog(@"Observed");
     }
+}
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"integer"];
 }
 
 - (IBAction)minusNumber:(id)sender {
