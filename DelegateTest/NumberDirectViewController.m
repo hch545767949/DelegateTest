@@ -39,9 +39,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc {
-    [self removeObserver:self forKeyPath:@"integer"];
-}
+//- (void)dealloc {
+//    [self removeObserver:self forKeyPath:@"integer"];
+//}
 
 //直接修改，不需要这个方法监听
 //- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -56,7 +56,7 @@
     NSNumber *newNumber = [NSNumber numberWithInteger:[self.integer integerValue] - 1];
     self.integer = newNumber;
     self.number.text = [NSString stringWithFormat:@"%@",newNumber];
-    NSLog(@"minusNumber");
+    NSLog(@"minusNumber%ld",[newNumber integerValue]);
 }
 
 - (IBAction)plusNumber:(id)sender {

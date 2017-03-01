@@ -4,7 +4,9 @@
 //
 //  Created by greenlaw on 2017/2/28.
 //  Copyright © 2017年 Greenlaw. All rights reserved.
-//
+
+
+//  体会kvo和普通修改方式的区别、优缺点
 
 #import "AppDelegate.h"
 #import "NumberKVOViewController.h"
@@ -24,7 +26,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];;
     
+    //KVO模式
     self.window.rootViewController = self.numberKVOViewController;
+    //直接修改
 //    self.window.rootViewController = self.numberDirectViewController;
     [self.window makeKeyAndVisible];
 
