@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404112321E6677960060F990 /* NumberDirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 404112301E6677960060F990 /* NumberDirectViewController.m */; };
+		404112331E6677960060F990 /* NumberDirectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 404112311E6677960060F990 /* NumberDirectViewController.xib */; };
 		40B0C69D1E65266400BA3D11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0C69C1E65266400BA3D11 /* main.m */; };
 		40B0C6A01E65266400BA3D11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0C69F1E65266400BA3D11 /* AppDelegate.m */; };
 		40B0C6A81E65266400BA3D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B0C6A71E65266400BA3D11 /* Assets.xcassets */; };
 		40B0C6AB1E65266400BA3D11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B0C6A91E65266400BA3D11 /* LaunchScreen.storyboard */; };
-		40B0C6B81E65289F00BA3D11 /* NumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0C6B61E65289F00BA3D11 /* NumberViewController.m */; };
-		40B0C6B91E65289F00BA3D11 /* NumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B0C6B71E65289F00BA3D11 /* NumberViewController.xib */; };
+		40B0C6B81E65289F00BA3D11 /* NumberKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B0C6B61E65289F00BA3D11 /* NumberKVOViewController.m */; };
+		40B0C6B91E65289F00BA3D11 /* NumberKVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B0C6B71E65289F00BA3D11 /* NumberKVOViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4041122F1E6677960060F990 /* NumberDirectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDirectViewController.h; sourceTree = "<group>"; };
+		404112301E6677960060F990 /* NumberDirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDirectViewController.m; sourceTree = "<group>"; };
+		404112311E6677960060F990 /* NumberDirectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberDirectViewController.xib; sourceTree = "<group>"; };
 		40B0C6981E65266400BA3D11 /* DelegateTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelegateTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B0C69C1E65266400BA3D11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40B0C69E1E65266400BA3D11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -23,9 +28,9 @@
 		40B0C6A71E65266400BA3D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40B0C6AA1E65266400BA3D11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40B0C6AC1E65266400BA3D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40B0C6B51E65289F00BA3D11 /* NumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberViewController.h; sourceTree = "<group>"; };
-		40B0C6B61E65289F00BA3D11 /* NumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberViewController.m; sourceTree = "<group>"; };
-		40B0C6B71E65289F00BA3D11 /* NumberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberViewController.xib; sourceTree = "<group>"; };
+		40B0C6B51E65289F00BA3D11 /* NumberKVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberKVOViewController.h; sourceTree = "<group>"; };
+		40B0C6B61E65289F00BA3D11 /* NumberKVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberKVOViewController.m; sourceTree = "<group>"; };
+		40B0C6B71E65289F00BA3D11 /* NumberKVOViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberKVOViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +65,16 @@
 			children = (
 				40B0C69E1E65266400BA3D11 /* AppDelegate.h */,
 				40B0C69F1E65266400BA3D11 /* AppDelegate.m */,
-				40B0C6B51E65289F00BA3D11 /* NumberViewController.h */,
-				40B0C6B61E65289F00BA3D11 /* NumberViewController.m */,
-				40B0C6B71E65289F00BA3D11 /* NumberViewController.xib */,
+				40B0C6B51E65289F00BA3D11 /* NumberKVOViewController.h */,
+				40B0C6B61E65289F00BA3D11 /* NumberKVOViewController.m */,
+				40B0C6B71E65289F00BA3D11 /* NumberKVOViewController.xib */,
 				40B0C6A71E65266400BA3D11 /* Assets.xcassets */,
 				40B0C6A91E65266400BA3D11 /* LaunchScreen.storyboard */,
 				40B0C6AC1E65266400BA3D11 /* Info.plist */,
 				40B0C69B1E65266400BA3D11 /* Supporting Files */,
+				4041122F1E6677960060F990 /* NumberDirectViewController.h */,
+				404112301E6677960060F990 /* NumberDirectViewController.m */,
+				404112311E6677960060F990 /* NumberDirectViewController.xib */,
 			);
 			path = DelegateTest;
 			sourceTree = "<group>";
@@ -138,8 +146,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B0C6B91E65289F00BA3D11 /* NumberViewController.xib in Resources */,
+				40B0C6B91E65289F00BA3D11 /* NumberKVOViewController.xib in Resources */,
 				40B0C6AB1E65266400BA3D11 /* LaunchScreen.storyboard in Resources */,
+				404112331E6677960060F990 /* NumberDirectViewController.xib in Resources */,
 				40B0C6A81E65266400BA3D11 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,7 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40B0C6A01E65266400BA3D11 /* AppDelegate.m in Sources */,
-				40B0C6B81E65289F00BA3D11 /* NumberViewController.m in Sources */,
+				40B0C6B81E65289F00BA3D11 /* NumberKVOViewController.m in Sources */,
+				404112321E6677960060F990 /* NumberDirectViewController.m in Sources */,
 				40B0C69D1E65266400BA3D11 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

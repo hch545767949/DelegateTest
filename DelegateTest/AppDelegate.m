@@ -7,11 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "NumberViewController.h"
+#import "NumberKVOViewController.h"
+#import "NumberDirectViewController.h"
 
 @interface AppDelegate ()
 
-@property (strong,nonatomic) NumberViewController *numberViewController;
+@property (strong,nonatomic) NumberKVOViewController *numberKVOViewController;
+@property (strong,nonatomic) NumberDirectViewController *numberDirectViewController;
 
 @end
 
@@ -22,7 +24,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];;
     
-    self.window.rootViewController = self.numberViewController;
+    self.window.rootViewController = self.numberKVOViewController;
+//    self.window.rootViewController = self.numberDirectViewController;
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -56,11 +59,18 @@
 }
 
 #pragma mark -- getters and setters
-- (NumberViewController *)numberViewController {
+- (NumberKVOViewController *)numberKVOViewController {
     
-    if(_numberViewController == nil) {
-        _numberViewController = [[NumberViewController alloc]init];
+    if(_numberKVOViewController == nil) {
+        _numberKVOViewController = [[NumberKVOViewController alloc]init];
     }
-    return _numberViewController;
+    return _numberKVOViewController;
+}
+
+- (NumberDirectViewController *)numberDirectViewController {
+    if(_numberDirectViewController == nil) {
+        _numberDirectViewController = [[NumberDirectViewController alloc]init];
+    }
+    return _numberDirectViewController;
 }
 @end

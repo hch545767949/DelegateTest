@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NumberViewController : UIViewController
+@interface NumberKVOViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *minus;
 @property (weak, nonatomic) IBOutlet UILabel *number;

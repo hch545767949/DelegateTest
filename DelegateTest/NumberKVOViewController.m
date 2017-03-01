@@ -6,13 +6,13 @@
 //  Copyright © 2017年 Greenlaw. All rights reserved.
 //
 
-#import "NumberViewController.h"
+#import "NumberKVOViewController.h"
 
-@interface NumberViewController ()
+@interface NumberKVOViewController ()
 
 @end
 
-@implementation NumberViewController
+@implementation NumberKVOViewController
 
 - (instancetype)init {
     self = [super init];
@@ -50,19 +50,21 @@
 */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if( [keyPath isEqualToString:@"integer"] && object == self) {
-        self.number.text = [change valueForKey:NSKeyValueChangeNewKey];
+        NSNumber *newNumber = [change valueForKey:NSKeyValueChangeNewKey];
+        self.number.text = [NSString stringWithFormat:@"%@",newNumber];
+        NSLog(@"Observed");
     }
 }
 
 - (IBAction)minusNumber:(id)sender {
     NSNumber *newNumber = [NSNumber numberWithInteger:[self.integer integerValue] - 1];
-    [self setValue:newNumber forKey:@"integer"];
+    self.integer = newNumber;
     NSLog(@"minusNumber");
 }
 
 - (IBAction)plusNumber:(id)sender {
     NSNumber *newNumber = [NSNumber numberWithInteger:[self.integer integerValue] + 1];
-    [self setValue:newNumber forKey:@"integer"];
-    NSLog(@"plusNumber");
+    self.integer = newNumber;
+    NSLog(@"plusNumber%ld",[newNumber integerValue]);
 }
 @end
